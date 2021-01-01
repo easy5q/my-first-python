@@ -71,3 +71,24 @@ if __name__ == '__main__':
 
     python worker.py
 
+
+
+### The Jupyter Notebook
+
+        pip install jupyter ipython django-extensions
+then append django_extensions in file `settings.py` under 
+
+```python
+INSTALLED_APPS section
+INSTALLED_APPS = [
+    ...
+    'django_extensions',
+]
+```
+And then let’s run jupyter notebook
+ 
+
+     python manage.py shell_plus --notebook
+
+
+После этого создайте файл записной книжки jupyter и введите простая команда для импорта моделей django `from django.db.models import Model` затем попробуйте выполнить, используя **Shift+Enter**. Если возникают ошибки, вы можете использовать каждая команда в блокноте jupyter такая же, как python manage.py shell.
